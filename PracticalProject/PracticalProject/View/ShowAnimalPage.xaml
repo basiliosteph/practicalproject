@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticalProject.View.ShowAnimalPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand">
+
+            <Image Source="hashira.png" 
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Animals List"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Button Text="Add New Record" 
+                    Clicked="btnAddRecord_Clicked" 
+                    x:Name="btnAddRecord"
+                    BackgroundColor="#bc6c25"
+                    TextColor="#283618"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="Start" />
+
+            <Frame BackgroundColor="#dda15e"
+                   Padding="10"
+                   CornerRadius="10"
+                   Margin="0,10">
+
+                <Grid RowSpacing="10"
+                      ColumnSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Animal Code" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="0" />
+
+                    <Label Text="Characteristics" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="1" />
+
+                    <Label Text="Species" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="2" />
+
+                    <Label Text="Habitat" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="3" />
+
+                    <Label Text="Threat" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center" 
+                           Grid.Row="0" 
+                           Grid.Column="4" />
+                </Grid>
+
+            </Frame>
+
+            <ListView x:Name="lstData" 
+                      HasUnevenRows="True" 
+                      ItemSelected="lstData_ItemSelected"
+                      SeparatorVisibility="None">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#606c38"
+                                   Padding="10"
+                                   Margin="0,5"
+                                   CornerRadius="10">
+
+                                <Grid RowSpacing="10"
+                                      ColumnSpacing="20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding AnimalCode}"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                           Grid.Row="0"
+                                           Grid.Column="0" />
+
+                                    <Label Text="{Binding Characteristics}"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                           Grid.Row="0"
+                                           Grid.Column="1" />
+
+                                    <Label Text="{Binding Species}"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                           Grid.Row="0"
+                                           Grid.Column="2" />
+
+                                    <Label Text="{Binding Habitat}"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                           Grid.Row="0"
+                                           Grid.Column="3" />
+
+                                    <Label Text="{Binding Threat}"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                           Grid.Row="0"
+                                           Grid.Column="4" />
+                                </Grid>
+
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticalProject.View.ShowHomePage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+
+            <Image Source="hashira.png" 
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Welcome to Hashira Animaml Welfare Center!" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+
+            <Label Text="In the tapestry of life, every thread of compassion woven for animals strengthens the fabric of our humanity." 
+               FontSize="18" 
+               HorizontalOptions="Center" />
+
+            <Label Text="True compassion extends beyond ourselves, embracing the silent souls of the animal kingdom. In their well-being, we discover the essence of our humanity." 
+               FontSize="18" 
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+
+            <Button Text="Animal Table" 
+                FontSize="20" 
+                BackgroundColor="#bc6c25" 
+                TextColor="#fefae0" 
+                CornerRadius="10" 
+                HeightRequest="60" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="EndAndExpand"
+                Clicked="OnAnimalTableClicked" />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
