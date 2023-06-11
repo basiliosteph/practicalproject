@@ -10,7 +10,7 @@
                    HorizontalOptions="Center"
                    VerticalOptions="CenterAndExpand" />
 
-            <Label Text="Welcome to Hashira Animaml Welfare Center!" 
+            <Label Text="Welcome to Hashira Animal Welfare Center!" 
                FontSize="24" 
                FontAttributes="Bold" 
                HorizontalOptions="Center" 
@@ -35,6 +35,5 @@
                 VerticalOptions="EndAndExpand"
                 Clicked="OnAnimalTableClicked" />
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>
